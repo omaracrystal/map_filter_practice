@@ -9,8 +9,24 @@
 // Shift every number one forward. The first item in the returned array
 // should be the last item in the input array.
 
+var shiftFn = function (array) {
+  return array.map(function (current, index, array) {
+    return array[index-1] || array[array.length-1];
+  });
+};
+
+console.log(shiftFn([10,20,30]));
+
 // myFn(['average', 'exceptional', 'amazing']) >> ['aeae', 'eeioa', 'aai']
 // Return just the vowels
+
+var vowelsFn = function (array) {
+  return array.map(function (current, index, array) {
+    return current.replace(/[^aeiou]/ig,'');
+  });
+};
+
+console.log(vowelsFn(['average', 'exceptional', 'amazing']));
 
 // var myMatrix = [[1,2,3],
 //                 [4,5,6],
@@ -18,62 +34,76 @@
 // myFn(myMatrix) >> [ [ 2, 4, 6 ], [ 8, 10, 12 ], [ 14, 16, 18 ] ]
 // Return the double of all numbers in the matrix, in the same format.
 
-// var wesFavoritePokemon = [{ 
+var myMatrix = [[1,2,3],
+                [4,5,6],
+                [7,8,9]];
+
+var matrixFn = function (array) {
+  return array.map(function (row) {
+    return row.map(function (val) {
+      return (val * 2);
+    });
+  });
+};
+
+console.log(matrixFn(myMatrix));
+
+// var wesFavoritePokemon = [{
 //                             id: '38413e28-83ec-11e5-8bcf-feff819cdc9f',
 //                             name: 'Crobat',
 //                             type: ['Poison', 'Flying'],
 //                             evolves: false,
-//                             formerEvolutions: [{ 
+//                             formerEvolutions: [{
 //                                                  id: '38414792-83ec-11e5-8bcf-feff819cdc9f',
 //                                                  name: 'Golbat'
 //                                                },
-//                                                { 
+//                                                {
 //                                                  id: '3841490e-83ec-11e5-8bcf-feff819cdc9f',
 //                                                  name: 'Zubat'
 //                                                }]
 //                           },
-//                           { 
+//                           {
 //                             id: '384141f2-83ec-11e5-8bcf-feff819cdc9f'
 //                             name: 'Gengar',
 //                             type: ['Ghost', 'Poison'],
 //                             evolves: true,
-//                             formerEvolutions: [{ 
+//                             formerEvolutions: [{
 //                                                  id: '38414fa8-83ec-11e5-8bcf-feff819cdc9f',
 //                                                  name: 'Haunter'
 //                                                },
-//                                                { 
+//                                                {
 //                                                  id: '38415174-83ec-11e5-8bcf-feff819cdc9f',
 //                                                  name: 'Ghastly'
 //                                                }],
-//                             nextEvolutions: [{ 
+//                             nextEvolutions: [{
 //                                                id: '384152e6-83ec-11e5-8bcf-feff819cdc9f',
 //                                                name: 'Mega Gengar'
 //                                              }]
 //                           },
-//                           { 
+//                           {
 //                             id: '3841444a-83ec-11e5-8bcf-feff819cdc9f'
 //                             name: 'Jigglypuff',
 //                             type: ['Normal', 'Fairy'],
 //                             evolves: true,
-//                             formerEvolutions: [{ 
+//                             formerEvolutions: [{
 //                                                  id: 'fda25954-83ec-11e5-8bcf-feff819cdc9f',
 //                                                  name: 'Igglybuff'
 //                                                }],
-//                             nextEvolutions: [{ 
+//                             nextEvolutions: [{
 //                                                id: 'fda25b2a-83ec-11e5-8bcf-feff819cdc9f',
 //                                                name: 'Wigglytuff'
 //                                              }]
 //                           },
-//                           { 
+//                           {
 //                             id: '3841460c-83ec-11e5-8bcf-feff819cdc9f'
 //                             name: 'Clefairy',
 //                             type: ['Fairy'],
 //                             evolves: true,
-//                             formerEvolutions: [{ 
+//                             formerEvolutions: [{
 //                                                  id: 'fda262be-83ec-11e5-8bcf-feff819cdc9f',
 //                                                  name: 'Cleffa'
 //                                                }],
-//                             nextEvolutions: [{ 
+//                             nextEvolutions: [{
 //                                                id: 'fda2639a-83ec-11e5-8bcf-feff819cdc9f',
 //                                                name: 'Clefable'
 //                                              }]
@@ -147,3 +177,4 @@
 //                              '38415174-83ec-11e5-8bcf-feff819cdc9f',
 //                              ...]
 // Return just the IDs of the last Pokemon inside of formerEvolutions (i.e. 'Zubat', 'Ghastly', ...)
+
