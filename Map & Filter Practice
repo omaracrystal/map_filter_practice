@@ -31,6 +31,11 @@
 // myFn1(wesFavoritePokemon) >> ['Crobat', 'Gengar', 'Eevee', 'Clefairy']
 // myFn2(wesFavoritePokemon) >> ['Poison', 'Poison', 'Normal', 'Fairy']
 
+// var myMatrix = [[1,2,3],
+//                 [3,4,5],
+//                 [6,7,8]];
+// myFn(myMatrix) >> [ [ 2, 4, 6 ], [ 6, 8, 10 ], [ 12, 14, 16 ] ]
+// Return the double of all numbers in the matrix, in the same format.
 
 // .filter(filterFunction)
 
