@@ -1,0 +1,64 @@
+// .map(function (currentVal, index, array) { ... })
+
+// Write a function that does the following:
+
+// myFn([10,20,30]) >> [1,2,3]
+
+// myFn([10,20,30]) >> [30,10,20]
+
+// myFn(['average', 'exceptional', 'amazing']) >> ['aeae', 'eeioa', 'aai']
+
+// var wesFavoritePokemon = [{ 
+//                             name: 'Crobat',
+//                             type: ['Poison', 'Flying'],
+//                             evolves: false
+//                           },
+//                           { 
+//                             name: 'Gengar',
+//                             type: ['Poison', 'Ghost'],
+//                             evolves: true
+//                           },
+//                           { 
+//                             name: 'Eevee',
+//                             type: ['Normal'],
+//                             evolves: true
+//                           },
+//                           { 
+//                             name: 'Clefairy',
+//                             type: ['Fairy'],
+//                             evolves: true
+//                           }]
+// myFn1(wesFavoritePokemon) >> ['Crobat', 'Gengar', 'Eevee', 'Clefairy']
+// myFn2(wesFavoritePokemon) >> ['Poison', 'Poison', 'Normal', 'Fairy']
+
+
+// .filter(filterFunction)
+
+// Write a function that does the following:
+
+// myFn([10,15,20]) >> [10,20]
+
+// myFn(['return', 'phrases', 'with one word']) >> ['return', 'phrases']
+
+// For the following, return the entire object.
+
+// myFn(wesFavoritePokemon) >> [{ name: 'Crobat', type: ... }, { name: 'Gengar', type: ... }]
+// (Only those Pokemon that are of the Poison type.)
+
+// myFn(wesFavoritePokemon) >> [{ name: 'Crobat', type: ... }]
+// (Only those where evolves = false)
+
+
+// Both .map and .filter
+
+// myFn([10,15,20]) >> [5,10]
+// Return the halves of those numbers that are initially even
+
+// myFn(['racecar', 'amalgam', 'oligopoly']) >> ['racecar', 'amalgam']
+// Return only those words whose VOWELS form a palindrome (e.g. 'amalgam' >> 'aaa' >> is a palindrome)
+
+// myFn(wesFavoritePokemon) >> ['Poison', 'Normal', 'Fairy']
+// Return the first type of those Pokemon that can evolve.
+
+// myFn(wesFavoritePokemon) >> ['Crobat', 'Gengar']
+// Return the names of the Pokemon who have the poison type.
